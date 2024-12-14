@@ -20,7 +20,7 @@ export const Navbar = () => {
             <Link href="/" className="flex items-center space-x-2">
               <Brain className="h-8 w-8 text-purple-500" />
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-                ParallelAI
+                TAP COIN
               </span>
             </Link>
           </div>

@@ -20,15 +20,15 @@ export const Hero = () => {
             <br />
             Is Here
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
             Harness the power of artificial intelligence to transform your business
             with our cutting-edge parallel processing technology.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="primary" className="group">
-              Get Started
+            <Button variant="primary" className="group flex items-center space-x-2">
+              <span>Get Started</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline">Learn More</Button>
