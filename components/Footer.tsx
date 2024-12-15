@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-              ParallelAI
+              Tap-Coin
             </h3>
             <p className="text-gray-400">
               Transforming businesses with cutting-edge AI technology.
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ParallelAI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Tap-Coin. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -24,7 +24,7 @@ export const WalletButton = () => {
 
   return (
     <Button
-      variant="outline"
+      variant="primary"
       onClick={connectWallet}
       className="flex items-center gap-2"
     >

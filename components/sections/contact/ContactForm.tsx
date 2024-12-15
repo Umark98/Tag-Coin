@@ -1,37 +1,25 @@
-"use client";
+import React from "react";
 
-import { motion } from "framer-motion";
-import { Send } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+interface FormFieldProps {
+  label: string;
+  type: string;
+  placeholder?: string;
+}
 
-export const ContactForm = () => (
-  <motion.form
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay: 0.2 }}
-    className="space-y-6"
-  >
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <FormField
-        label="Name"
-        type="text"
-        placeholder="John Doe"
+export const FormField: React.FC<FormFieldProps> = ({ label, type, placeholder }) => (
+  <div className="form-field">
+    <label className="block text-sm font-medium mb-1">{label}</label>
+    {type === "textarea" ? (
+      <textarea
+        className="form-input w-full border rounded-md p-2"
+        placeholder={placeholder}
       />
-      <FormField
-        label="Email"
-        type="email"
-        placeholder="john@example.com"
+    ) : (
+      <input
+        type={type}
+        className="form-input w-full border rounded-md p-2"
+        placeholder={placeholder}
       />
-    </div>
-    <FormField
-      label="Message"
-      type="textarea"
-      placeholder="Your message..."
-    />
-    <Button type="submit" className="w-full group">
-      Send Message
-      <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-    </Button>
-  </motion.form>
+    )}
+  </div>
 );

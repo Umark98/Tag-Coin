@@ -30,7 +30,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
             Harness the power of artificial intelligence to transform your business
-            with our cutting-edge parallel processing technology.
+            with our cutting-edge processing technology.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
