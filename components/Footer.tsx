@@ -76,8 +76,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Tag-Coin. All rights reserved.</p>
+        <div   className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
+          <a href="https://cybillnerd.com">
+             <p>&copy; {new Date().getFullYear()} Cybill Nerd. All rights reserved.</p>
+            </a>
         </div>
       </div>
     </footer>
