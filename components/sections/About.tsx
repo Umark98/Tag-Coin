@@ -1,7 +1,4 @@
-"use client";
-
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -47,15 +44,18 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
-                alt="AI Technology"
-                fill
-                className="object-cover"
-              />
+            <div className="aspect-square rounded-xl overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                className="w-full h-full object-cover"
+              >
+                <source src="/Background.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-xl" />
           </motion.div>
         </div>
       </div>
