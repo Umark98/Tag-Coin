@@ -4,48 +4,42 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
-  // Define initial positions for the dots (start, middle, end)
-  const dotInitialPositions = ["0vw", "15vw", "30vw", "45vw", "60vw", "75vw", "90vw"]; // More staggered positions
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/20 to-black" />
 
-      {/* Horizontal pink static lines (thinner and faded) */}
+      {/* Horizontal pink static lines */}
       <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
-        {[...Array(7)].map((_, index) => (
+        {[...Array(15)].map((_, index) => (
           <div
             key={index}
-            className="h-[2px] w-full bg-pink-500/10" // Thinner and reduced opacity
+            className="h-[2px] w-full bg-pink-500/10"
             style={{
               position: "absolute",
-              top: `${15 + index * 12}%`, // Adjust line spacing for 7 lines
+              top: `${10 + index * 4}%`, // Adjust line spacing for better distribution
             }}
           />
         ))}
       </div>
 
-      {/* Shining dots moving along the lines */}
+      {/* Glowing animated lines (wire burning effect) */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(7)].map((_, index) => (
+        {[...Array(20)].map((_, index) => (
           <motion.div
             key={index}
-            className="w-[5px] h-[5px] bg-white/60 rounded-full shadow-[0px_0px_20px_4px_rgba(255,255,255,0.5)]" // Smaller and more opaque dots with glow
-            initial={{ x: dotInitialPositions[index] }} // Start at staggered positions in vw
-            animate={{
-              x: ["0vw", "100vw"], // Move from start to end of viewport width
-            }}
+            className="h-[2px] w-1/4 bg-gradient-to-r from-white via-pink-500 to-transparent shadow-[0px_0px_10px_rgba(255,0,128,0.8)]"
+            initial={{ x: "-100%" }} // Start well outside the viewport
+            animate={{ x: "100vw" }} // Move fully across the viewport
             transition={{
-              duration: 6, // Adjusted animation speed for smoother effect
-              repeat: Infinity,
-              repeatType: "reverse", // Ensures the dots reverse back after reaching the end
-              delay: index * 0.3, // Staggered delay for each dot
+              duration: 8, // Animation duration
+              repeat: Infinity, // Infinite loop
+              delay: index * 0.3, // Staggered delay for cascading effect
               ease: "linear",
             }}
             style={{
               position: "absolute",
-              top: `${15 + index * 12}%`, // Align dots with horizontal lines
+              top: `${10 + index * 4}%`, // Align with static pink lines
             }}
           />
         ))}
@@ -54,9 +48,9 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 2 }}
           className="space-y-8"
         >
           <h1 className="text-5xl md:text-7xl font-bold">
