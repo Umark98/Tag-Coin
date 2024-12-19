@@ -1,5 +1,5 @@
 import React from "react"; 
-import { Menu, X, Brain } from "lucide-react";
+import { Brain } from "lucide-react";
 
 const Info = () => {
   return (
@@ -45,40 +45,43 @@ const Info = () => {
       </p>
 
       {/* Column Layout */}
-      <div className="flex flex-row items-center space-y-6 mt-8">
-        <div className="w-full max-w-md flex flex-col items-center justify-center border  p-6 rounded-lg shadow-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+        {/* Image 1 */}
+        <div className="flex flex-col items-center justify-center p-6 rounded-lg shadow-lg border-t-4 border-l border-r border-b border-pink-400">
           <img
             src="./automatic.svg"
-            alt="Image 1"
-            className="w-40 h-40 object-cover  mb-4"
+            alt="Automatic Parallelization"
+            className="w-40 h-40 object-cover mb-4"
           />
-          <h1> Automatic Parallelization</h1>
+          <h1 className="text-xl font-semibold text-white">Automatic Parallelization</h1>
           <p className="text-lg text-white text-center">
-          Every operation capable of running in parallel does seamlessly, without explicit instructions
+            Every operation capable of running in parallel does seamlessly, without explicit instructions.
           </p>
         </div>
 
-        <div className="w-full max-w-md flex flex-col items-center justify-center border  p-6 rounded-lg shadow-lg">
+        {/* Image 2 */}
+        <div className="flex flex-col items-center justify-center p-6 rounded-lg shadow-lg border-t-4 border-l border-r border-b border-pink-400">
           <img
             src="./perfomance.svg"
-            alt="Image 1"
-            className="w-40 h-40 object-cover  mb-4"
+            alt="Maximized Performance"
+            className="w-40 h-40 object-cover mb-4"
           />
-          <h1>  Maximized Performance</h1>
+          <h1 className="text-xl font-semibold text-white">Maximized Performance</h1>
           <p className="text-lg text-white text-center">
             The full potential of both CPU and GPU cores, solving problems in a fraction of the time.
           </p>
         </div>
-        
-        <div className="w-full max-w-md flex flex-col items-center justify-center border  p-6 rounded-lg shadow-lg">
+
+        {/* Image 3 */}
+        <div className="flex flex-col items-center justify-center p-6 rounded-lg shadow-lg border-t-4 border-l border-r border-b border-pink-400">
           <img
             src="./intuitive-coding.svg"
-            alt="Image 1"
-            className="w-40 h-40 object-cover  mb-4"
+            alt="Intuitive Coding"
+            className="w-40 h-40 object-cover mb-4"
           />
-          <h1> Intuitive Coding</h1>
+          <h1 className="text-xl font-semibold text-white">Intuitive Coding</h1>
           <p className="text-lg text-white text-center">
-            Write high-level, Python-like code without the complexities of parallel programming
+            Write high-level, Python-like code without the complexities of parallel programming.
           </p>
         </div>
       </div>

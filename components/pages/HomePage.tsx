@@ -7,6 +7,7 @@ import { CryptoSlider } from "../sections/CryptoSlider";
 import Info from "../sections/Info";
 
 
+
 export const HomePage = () => (
   <>
     <Hero/>
