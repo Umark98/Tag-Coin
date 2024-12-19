@@ -33,7 +33,7 @@ export const CryptoSlider = () => {
       onMouseEnter={() => setHovered(false)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="w-full overflow-hidden ">
+      <div className="w-full overflow-hidden mt-5">
         <motion.div
           {...slideAnimation}
           animate={hovered ? {} : slideAnimation.animate}
