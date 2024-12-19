@@ -5,11 +5,18 @@ const About = () => {
     <section id="about" className="py-24 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content (Text Section) */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: -100 }} // Start from the left
+            whileInView={{ opacity: 1, x: 0 }} // Animate to the normal position
+            viewport={{ once: false }} // Ensure it animates every time it enters the viewport
+            transition={{
+              duration: 1, // Animation duration for text
+              ease: "easeInOut", // Smooth easing for transition
+              delay: 0.2, // Delay for animation start
+            }}
+            className="text-left"
           >
             <h2 className="text-4xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
@@ -37,14 +44,19 @@ const About = () => {
             </div>
           </motion.div>
 
+          {/* Right Content (Video Section) */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: 100 }} // Start from the right
+            whileInView={{ opacity: 1, x: 0 }} // Animate to the normal position
+            viewport={{ once: false }} // Ensure it animates every time it enters the viewport
+            transition={{
+              duration: 1.5, // Longer animation duration for video
+              ease: "easeInOut", // Smooth easing for transition
+              delay: 0.6, // Increased delay for video animation
+            }}
             className="relative"
           >
-            <div className="aspect-square rounded-xl overflow-hidden">
+            <div className="w-full h-48 sm:h-64 lg:h-72 xl:h-80 rounded-lg overflow-hidden">
               <video
                 autoPlay
                 loop
