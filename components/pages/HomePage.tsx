@@ -6,11 +6,6 @@ import Hero from "../sections/Hero";
 import { CryptoSlider } from "../sections/CryptoSlider";
 
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBitcoin } from "@fortawesome/free-brands-svg-icons";
-
-
-
 export const HomePage = () => (
   <>
     <Hero/>
