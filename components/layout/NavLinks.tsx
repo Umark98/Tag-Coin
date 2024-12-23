@@ -8,7 +8,7 @@ interface NavLinkProps {
 export const NavLink = ({ href, children }: NavLinkProps) => (
   <Link
     href={href}
-    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+    className="text-black hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
   >
     {children}
   </Link>
@@ -17,7 +17,7 @@ export const NavLink = ({ href, children }: NavLinkProps) => (
 export const MobileNavLink = ({ href, children }: NavLinkProps) => (
   <Link
     href={href}
-    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+    className="text-gray-600 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
   >
     {children}
   </Link>

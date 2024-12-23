@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-black relative">
+    <section id="about" className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -23,7 +23,7 @@ const About = () => {
                 About Our Technology
               </span>
             </h2>
-            <p className="text-gray-400 text-lg mb-6">
+            <p className="text-gray-600 text-lg mb-6">
               We're pioneering the future of artificial intelligence with our
               revolutionary parallel processing technology. Our platform enables
               businesses to harness the full potential of AI while maintaining
@@ -38,7 +38,7 @@ const About = () => {
               ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <div className="w-2 h-2 rounded-full bg-purple-500" />
-                  <span className="text-gray-300">{item}</span>
+                  <span className="text-gray-600">{item}</span>
                 </div>
               ))}
             </div>

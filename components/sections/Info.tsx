@@ -1,13 +1,13 @@
-import React from "react"; 
+import React from "react";  
 import { Brain } from "lucide-react";
 
 const Info = () => {
   return (
-    <div className="container mx-auto p-4 text-center">
+    <div className="container mx-auto p-4 text-center bg-white">
       {/* Title with Logo */}
       <div className="flex justify-center items-center mb-4">
         <span className="text-xl font-bold mr-4">
-          <h1 className="text-4xl text-transparent bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text">
+          <h1 className="text-6xl text-transparent bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text">
             20x Faster with
           </h1>
         </span>
@@ -22,23 +22,23 @@ const Info = () => {
       {/* Text Content with Glowing Divider */}
       <div className="flex justify-center items-center text-xl mb-4">
         <div className="text-center">
-          <h1 className="text-3xl bg-gradient-to-r text-purple-400 bg-clip-text">20x</h1>
-          <p className="text-lg text-purple-400">Faster Computation</p>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">20x</h1>
+          <p className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">Faster Computation</p>
         </div>
         <div className="relative mx-4 w-[1px] h-7 bg-pink-400 animate-glow"></div>
         <div className="text-center">
-          <h1 className="text-3xl text-purple-400">30s</h1>
-          <p className="text-lg text-purple-400">Typical Task Completion Time</p>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">30s</h1>
+          <p className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">Typical Task Completion Time</p>
         </div>
         <div className="relative mx-4 w-[1px] h-7 bg-pink-400 animate-glow"></div>
         <div className="text-center">
-          <h1 className="text-3xl text-purple-400">10min</h1>
-          <p className="text-lg text-purple-400">Traditional Completion Time</p>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">10min</h1>
+          <p className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">Traditional Completion Time</p>
         </div>
       </div>
 
       {/* Description */}
-      <p className="mt-4 text-xs text-gray-300">
+      <p className="mt-4 text-xs text-gray-600">
         ParallelAl's innovative execution model delivers unparalleled processing
         speeds, slashing computation times by up to<br /> 20x. A task that would
         typically take 10 minutes can now be completed in 30 seconds.
@@ -53,8 +53,8 @@ const Info = () => {
             alt="Automatic Parallelization"
             className="w-40 h-40 object-cover mb-4"
           />
-          <h1 className="text-xl font-semibold text-white">Automatic Parallelization</h1>
-          <p className="text-lg text-white text-center">
+          <h1 className="text-xl font-semibold text-gray-600">Automatic Parallelization</h1>
+          <p className="text-lg text-gray-600 text-center">
             Every operation capable of running in parallel does seamlessly, without explicit instructions.
           </p>
         </div>
@@ -66,8 +66,8 @@ const Info = () => {
             alt="Maximized Performance"
             className="w-40 h-40 object-cover mb-4"
           />
-          <h1 className="text-xl font-semibold text-white">Maximized Performance</h1>
-          <p className="text-lg text-white text-center">
+          <h1 className="text-xl font-semibold text-gray-600">Maximized Performance</h1>
+          <p className="text-lg text-gray-600 text-center">
             The full potential of both CPU and GPU cores, solving problems in a fraction of the time.
           </p>
         </div>
@@ -79,8 +79,8 @@ const Info = () => {
             alt="Intuitive Coding"
             className="w-40 h-40 object-cover mb-4"
           />
-          <h1 className="text-xl font-semibold text-white">Intuitive Coding</h1>
-          <p className="text-lg text-white text-center">
+          <h1 className="text-xl font-semibold text-gray-600">Intuitive Coding</h1>
+          <p className="text-lg text-gray-600 text-center">
             Write high-level, Python-like code without the complexities of parallel programming.
           </p>
         </div>

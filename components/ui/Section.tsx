@@ -10,7 +10,7 @@ export const Section = ({ children, className, id }: SectionProps) => (
   <section
     id={id}
     className={cn(
-      "py-24 bg-black relative",
+      "py-24 bg-white relative",
       className
     )}
   >

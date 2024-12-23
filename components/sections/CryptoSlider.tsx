@@ -15,7 +15,7 @@ const cryptoCurrencies = [
     </svg>
   )},
   { name: "Ripple", symbol: "XRP", svg: (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
       <circle cx="50" cy="50" r="50" fill="#00a9cc"/>
       <text x="50%" y="50%" fontSize="20" fill="white" textAnchor="middle" dy=".3em">XRP</text>
     </svg>
@@ -32,12 +32,6 @@ const cryptoCurrencies = [
       <text x="50%" y="50%" fontSize="20" fill="white" textAnchor="middle" dy=".3em">ADA</text>
     </svg>
   )},
-  { name: "Polkadot", symbol: "DOT", svg: (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-      <circle cx="50" cy="50" r="50" fill="#e6007a"/>
-      <text x="50%" y="50%" fontSize="20" fill="white" textAnchor="middle" dy=".3em">DOT</text>
-    </svg>
-  )},
   { name: "Dogecoin", symbol: "DOGE", svg: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
       <circle cx="50" cy="50" r="50" fill="#c2a633"/>
@@ -45,7 +39,7 @@ const cryptoCurrencies = [
     </svg>
   )},
   { name: "Solana", symbol: "SOL", svg: (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
       <circle cx="50" cy="50" r="50" fill="#00df9a"/>
       <text x="50%" y="50%" fontSize="20" fill="white" textAnchor="middle" dy=".3em">SOL</text>
     </svg>
@@ -74,11 +68,11 @@ export const CryptoSlider = () => {
 
   return (
     <div
-      className="relative overflow-hidden "
+      className="relative bg-white text-gray overflow-hidden "
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="w-full overflow-hidden mt-10">
+      <div className="w-full bg-white text-gray overflow-hidden mt-10">
         <motion.div
           {...slideAnimation}
           animate={hovered ? {} : slideAnimation.animate}
@@ -87,10 +81,10 @@ export const CryptoSlider = () => {
           {[...cryptoCurrencies, ...cryptoCurrencies].map((crypto, index) => (
             <div
               key={index}
-              className="flex items-center justify-center min-w-[150px] h-20 px-6 py-2 border-2 border-purple-400 text-white rounded-full text-sm font-bold uppercase tracking-wide hover:text-white hover:bg-purple-400 transition-all duration-300"
+              className="flex items-center justify-center  min-w-[150px] h-10 px-6 py-2 border-2 border-purple-400 text-gray-600 rounded-full text-sm font-bold uppercase tracking-wide hover:text-gray-600 hover:bg-purple-400 transition-all duration-300"
             >
               {crypto.svg}
-              <span className="ml-2">{crypto.name}</span>
+              <span className="ml-2 text-gray">{crypto.name}</span>
             </div>
           ))}
         </motion.div>

@@ -85,7 +85,7 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm overflow-y-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm overflow-y-auto"
           onClick={onClose} // Close on backdrop click
         >
           {/* Modal Card */}
@@ -99,7 +99,7 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute right-4 top-4 text-gray-400 hover:text-white"
+              className="absolute right-4 top-4 text-gray-600 hover:text-gray-600"
               aria-label="Close"
             >
               <X className="w-5 h-5" />
@@ -121,7 +121,7 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                     placeholder="Name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-600 focus:outline-none focus:border-purple-500"
                   />
                   {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                 </div>
@@ -135,7 +135,7 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-600 focus:outline-none focus:border-purple-500"
                 />
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
@@ -148,7 +148,7 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                   placeholder="Password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-600 focus:outline-none focus:border-purple-500"
                 />
                 {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
               </div>
@@ -160,7 +160,7 @@ export const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             </form>
 
             {/* Toggle Login/Register */}
-            <p className="mt-4 text-center text-gray-400">
+            <p className="mt-4 text-center text-gray-600">
               {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
               <button
                 onClick={() => setIsLogin(!isLogin)}

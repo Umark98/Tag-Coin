@@ -14,7 +14,7 @@ export const Features = () => {
         <motion.h2 {...fadeInUp} className="text-4xl font-bold mb-4">
           <GradientText>Powerful Features</GradientText>
         </motion.h2>
-        <p className="text-gray-400 text-xl">
+        <p className="text-gray-600 text-xl">
           Discover what makes our AI technology stand out
         </p>
       </div>

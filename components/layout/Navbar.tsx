@@ -13,7 +13,7 @@ export const Navbar = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10 p-4">
+    <nav className="fixed w-full bg-white text-black backdrop-blur-md z-50 border-b border-gray-200 p-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -24,8 +24,8 @@ export const Navbar = () => {
               </span>
             </Link>
           </div>
-          
-          <div className="hidden md:flex md:items-center md:space-x-4">
+
+          <div className="hidden md:flex text-black md:items-center md:space-x-4">
             <NavLink href="#features">Features</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#contact">Contact</NavLink>
@@ -33,6 +33,7 @@ export const Navbar = () => {
             <Button
               variant="primary"
               onClick={() => setIsAuthModalOpen(true)}
+              className="text-black"
             >
               Sign In
             </Button>
@@ -41,7 +42,7 @@ export const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-purple-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-purple-500"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -51,7 +52,7 @@ export const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-lg">
+        <div className="md:hidden bg-white text-black">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#about">About</MobileNavLink>
@@ -65,7 +66,7 @@ export const Navbar = () => {
                 setIsAuthModalOpen(true);
                 setIsOpen(false);
               }}
-              className="w-full mt-2"
+              className="w-full mt-2 text-black"
             >
               Sign In
             </Button>

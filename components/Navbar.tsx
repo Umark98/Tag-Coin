@@ -22,7 +22,7 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -41,7 +41,7 @@ const Navbar = () => {
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#contact">Contact</NavLink>
-              <button className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:opacity-90 transition-opacity">
+              <button className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-gray-600 hover:opacity-90 transition-opacity">
                 Get Started
               </button>
             </div>
@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-purple-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-purple-500"
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
@@ -65,7 +65,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden bg-black/95 backdrop-blur-lg"
+          className="md:hidden bg-white/95 backdrop-blur-lg"
           role="dialog"
           aria-labelledby="mobile-menu-title"
         >
@@ -81,7 +81,7 @@ const Navbar = () => {
             </MobileNavLink>
             <button
               onClick={closeMenu}
-              className="w-full mt-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:opacity-90 transition-opacity"
+              className="w-full mt-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-gray-600 hover:opacity-90 transition-opacity"
             >
               Get Started
             </button>
@@ -101,7 +101,7 @@ const NavLink = ({
 }) => (
   <Link
     href={href}
-    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+    className="text-gray-600 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
   >
     {children}
   </Link>
@@ -119,7 +119,7 @@ const MobileNavLink = ({
   <Link
     href={href}
     onClick={onClick}
-    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+    className="text-gray-600 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
   >
     {children}
   </Link>

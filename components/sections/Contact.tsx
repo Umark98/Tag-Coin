@@ -5,7 +5,7 @@ import { Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-black relative">
+    <section id="contact" className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const Contact = () => {
               Get in Touch
             </span>
           </h2>
-          <p className="text-gray-400 text-xl">
+          <p className="text-gray-600 text-xl">
             Ready to transform your business with AI? Contact us today.
           </p>
         </motion.div>
@@ -34,39 +34,39 @@ const Contact = () => {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">
+                <label className="block text-sm font-medium text-gray-600 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/20 rounded-lg focus:outline-none focus:border-purple-500 text-white"
+                  className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/20 rounded-lg focus:outline-none focus:border-purple-500 text-gray-600"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">
+                <label className="block text-sm font-medium text-gray-600 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/20 rounded-lg focus:outline-none focus:border-purple-500 text-white"
+                  className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/20 rounded-lg focus:outline-none focus:border-purple-500 text-gray-600"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-400 mb-2">
+              <label className="block text-sm font-medium text-gray-600 mb-2">
                 Message
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/20 rounded-lg focus:outline-none focus:border-purple-500 text-white"
+                className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/20 rounded-lg focus:outline-none focus:border-purple-500 text-gray-600"
                 placeholder="Your message..."
               />
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group"
+              className="w-full px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-gray-600 text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group"
             >
               Send Message
               <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

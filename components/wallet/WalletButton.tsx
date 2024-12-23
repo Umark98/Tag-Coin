@@ -28,7 +28,7 @@ export const WalletButton = () => {
       onClick={connectWallet}
       className="flex items-center gap-2"
     >
-      <Wallet className="w-4 h-4" />
+      <Wallet className="w-2 h-2" />
       {walletAddress ? (
         <span>
           {walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}
