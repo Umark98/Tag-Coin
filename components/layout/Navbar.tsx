@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Menu, X, Brain } from "lucide-react";
 import Link from "next/link";
@@ -13,7 +11,7 @@ export const Navbar = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-white text-black backdrop-blur-md z-50 border-b border-gray-200 p-4">
+    <nav className="w-full bg-white text-black backdrop-blur-md z-50 border-b border-gray-200 p-4 md:fixed">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -25,7 +23,8 @@ export const Navbar = () => {
             </Link>
           </div>
 
-          <div className="hidden md:flex text-black md:items-center md:space-x-4">
+          {/* Desktop menu */}
+          <div className="hidden md:flex items-center space-x-4">
             <NavLink href="#features">Features</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#contact">Contact</NavLink>
@@ -39,6 +38,7 @@ export const Navbar = () => {
             </Button>
           </div>
 
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}

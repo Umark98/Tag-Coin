@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -53,7 +51,7 @@ const Hero = () => {
           transition={{ duration: 2 }}
           className="space-y-8"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900">
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text">
               The Future of AI
             </span>
@@ -61,7 +59,7 @@ const Hero = () => {
             Is Here
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
             Harness the power of artificial intelligence to transform your business
             with our cutting-edge processing technology.
           </p>
@@ -82,6 +80,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
 

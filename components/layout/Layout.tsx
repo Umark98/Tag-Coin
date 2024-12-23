@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => (
-  <main className="max-h-screen bg-white text-black">
+  <main className="min-h-screen bg-white text-black">
     <Navbar />
     {children}
     <Footer/>
