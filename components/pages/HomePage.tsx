@@ -5,6 +5,8 @@ import About from "../sections/About";
 import Hero from "../sections/Hero";
 import { CryptoSlider } from "../sections/CryptoSlider";
 import Info from "../sections/Info";
+import Industry from "../sections/Industry";
+
 
 
 
@@ -15,6 +17,7 @@ export const HomePage = () => (
     <Features />
     <About/>
     <Info/>
+    <Industry/>
     <Contact/>
   </>
 );
