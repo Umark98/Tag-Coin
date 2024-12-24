@@ -12,7 +12,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }} // Animate to the normal position
             viewport={{ once: false }} // Ensure it animates every time it enters the viewport
             transition={{
-              duration: 1, // Animation duration for text
+              duration: 0.5, // Reduced animation duration for text
               ease: "easeInOut", // Smooth easing for transition
               delay: 0.2, // Delay for animation start
             }}
@@ -50,7 +50,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }} // Animate to the normal position
             viewport={{ once: false }} // Ensure it animates every time it enters the viewport
             transition={{
-              duration: 1.5, // Longer animation duration for video
+              duration: 0.75, // Reduced animation duration for video
               ease: "easeInOut", // Smooth easing for transition
               delay: 0.6, // Increased delay for video animation
             }}
