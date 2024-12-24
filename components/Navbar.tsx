@@ -41,9 +41,7 @@ const Navbar = () => {
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#contact">Contact</NavLink>
-              <button className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-gray-600 hover:opacity-90 transition-opacity">
-                Get Started
-              </button>
+              
             </div>
           </div>
 
@@ -79,12 +77,7 @@ const Navbar = () => {
             <MobileNavLink href="#contact" onClick={closeMenu}>
               Contact
             </MobileNavLink>
-            <button
-              onClick={closeMenu}
-              className="w-full mt-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-gray-600 hover:opacity-90 transition-opacity"
-            >
-              Get Started
-            </button>
+            
           </div>
         </div>
       )}

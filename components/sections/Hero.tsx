@@ -1,7 +1,12 @@
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { AuthModal } from "@/components/auth/AuthModal"; // Assuming AuthModal is the modal component
 
 const Hero = () => {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Background gradient */}
@@ -65,7 +70,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-400 text-gray-600 text-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2 group">
+            {/* Get Started Button */}
+            <button
+              onClick={() => setIsAuthModalOpen(true)} // Open the Auth Modal
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-400 text-gray-600 text-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2 group"
+            >
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -75,12 +84,17 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Authentication Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen} // Pass the state to control modal visibility
+        onClose={() => setIsAuthModalOpen(false)} // Close the modal
+      />
     </section>
   );
 };
 
 export default Hero;
-
 
 
 
